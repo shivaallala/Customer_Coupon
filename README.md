@@ -127,33 +127,46 @@ A new column, 'income_level' was derived from income attribute to standardize in
 ![Income Level display](data/Visualizations/Coffee%20Coupon%20Visuals/Income_level.png)
 
 
-#### Acceptance Rate Grouped by Each Attribute:
+#### Proportion of Coffee House Coupons accepted. 
 
-The acceptance rate for the Coffee House coupon was calculated for each attribute in the dataset.
-The unique value with the lowest and highest acceptance rates for each attribute was identified.
-Overall coupon acceptance rates for the lowest and highest subsets were calculated and compared.
-Results:
+Within the Coffee House coupon sub-dataset, we find that only 49.92% of the drivers accepted the coupons. Please see below histogram. 
 
-The overall coupon acceptance rate for the lowest subset was 45.73%, while for the highest subset, it was 53.39%. The difference between these rates was 7.66%.
-The proportion of Coffee House coupons accepted was calculated to be 49.92%.
-Conclusion:
-Passenger characteristics, as represented by various attributes, play a role in the acceptance of Coffee House coupons. The analysis provides insights into the factors influencing coupon acceptance rates, highlighting the importance of understanding passenger demographics and behavior in targeted marketing strategies for coffee-related promotions. Further investigation and targeted marketing efforts based on these insights may enhance the effectiveness of coupon campaigns.
+![Count of Coffee house Coupons accepted](data/Visualizations/Coffee%20Coupon%20Visuals/Count%20Of%20CH%20coupons%20accepted.png)
 
-This section serves as an exploratory analysis, paving the way for more in-depth investigations into specific passenger segments and their preferences regarding Coffee House coupons.
 
 ### Analysis
 
-Coupon Acceptance Rate based on the Number of Times Driver Goes to the Coffee House Monthly:
+#### Coupon Acceptance Rate based on the Number of Times Driver Goes to the Coffee House Monthly:
 
-Plots were created to show the count of coupons for each category (accepted and not accepted) based on the number of times a driver goes to the coffee house monthly.
-Another plot showed the acceptance rate by the number of times a driver goes to the coffee house.
-Coupon Acceptance Rate for Less than Average Income vs. Greater than Average Income:
+Drivers who tend to to the coffee house 1 time or less or far more likely to decline the coupon to the coffee house than drivers who go to the coffee house more than once. Colored stacked bar graph represents this perfectly. The graph to show proportion of coupon acceptance for each category of Coffee House feature also validates the hypothesis.
+Stacked color bar graph was created to show the count of coupons for each category (accepted and not accepted) based on the number of times a driver goes to the coffee house monthly.
 
-The average income range was determined.
-Coupon acceptance rates were calculated for drivers with less than average income and drivers with more than average income.
-Coupon Acceptance Rate Based on Each Income Range:
+![Relation between coupon acceptance and times went to Coffee House](data/Visualizations/Coffee%20Coupon%20Visuals/Stacked%20bar%20%20for%20Ch%20times%20visit.png)
+
+The acceptance rate by the number of times a driver goes to the coffee house.
+
+![Coffee House visits acceptance rate for each category](data/Visualizations/Coffee%20Coupon%20Visuals/CoffeeHouse%20visits%20acceptance%20rate.png)
+
+
+#### Income Analysis
+
+##### Coupon Acceptance Rate for Less than Average Income vs. Greater than Average Income:
+
+The average income range was determined. Coupon acceptance rates were calculated for drivers with less than average income and drivers with more than average income. This is a perfect senario where the created feature income level was used. The income level feature allows us to calculate the average income range which was 50000 - 62499. As the Income feature is categorical, calculating the average income range directly would have been a challenge. <br>
+
+Now that we have determined the average income range, we will be able to calculate the coffee house coupon acceptance rate for drivers who fall under the income ranges below and above the average income range. Based on the findings, acceptance rate for drivers who make less than average income is 52.26% and acceptance rate for drivers who make more than average income is 45.97%. Drivers who make more then average income are 6.29% more likely to accept the coffee house coupon than the driver who make less than the average income.
+
+For better understanding lets visualize coupon Acceptance rate based on each income range. From the observing the below representation, the bar chart closely represents a uniform distribution. Hence the difference of averages of acceptance rates below and above the average income range are relatively insigificant to consider income as a individual factor to determine the rational for why drivers accept the coupon. 
 
 Income ranges were grouped, and the acceptance rate for each range was calculated and plotted.
+
+![Coffee House coupon acceptance rate by driver income range](data/Visualizations/Coffee%20Coupon%20Visuals/Ch%20acceptance%20rate%20by%20Income.png)
+
+
+
+
+
+
 Lowest vs. Highest Acceptance Rate for Each Attribute Subset:
 
 Coupon acceptance rates were calculated for various attributes like destination, passenger, weather, etc.
