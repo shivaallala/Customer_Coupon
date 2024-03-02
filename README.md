@@ -236,6 +236,7 @@ Alone:
 Occupation Insight:
 Arts Design Entertainment Sports & Media (ADESM): Diverse and creative individuals, varying income levels. Potential openness to experiences, suggesting moderate coupon acceptance.
 Healthcare Practitioners & Technical (HPT): Skewed toward higher incomes. Professional and stable, making them likely candidates for coupon acceptance.
+<br>
 
 ![Passenger are Friends](data/Visualizations/Coffee%20Coupon%20Visuals/Friends%20vs%20occupation.png)
 
@@ -244,12 +245,14 @@ Friends:
 Occupation Dynamics:
 ADESM: Mirrors "Alone" group, indicating a social inclination. Similar diversity may suggest openness to group activities and coupons.
 HPT: Consistent incomes, implying financial stability within friend circles. Higher mean suggests favorable coupon acceptance.
+<br>
 
 ![Kids as passengers](data/Visualizations/Coffee%20Coupon%20Visuals/Kids%20vs%20Occupation.png)
 
 Kids:
 Occupation Characteristics:
 HPT: Limited data but notably high mean income. Likely professionals with a family. Potential acceptance due to higher income stability.
+<br>
 
 ![Partner as passenger](data/Visualizations/Coffee%20Coupon%20Visuals/Partner%20vs%20Occupation.png)
 
