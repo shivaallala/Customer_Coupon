@@ -16,15 +16,13 @@ Weather and Time: Are drivers more inclined to accept coupons during certain wea
 
 Passenger Presence: Does the presence of passengers, such as a partner, children, or friends, affect coupon acceptance?
 
-
 ## Data Analysis and Preprocessing Summary
 
 In the initial phase of the analysis, the dataset from the 'coupons.csv' file was loaded into a pandas DataFrame, and the 'car' attribute, which was missing the majority of values, was dropped. The dataset includes diverse attributes such as destination, passenger, weather, temperature, time, coupon type, expiration, gender, age, marital status, presence of children, education, occupation, income, and more.
 
-The investigation revealed some missing values in attributes related to different coupon types (e.g., 'Bar', 'CoffeeHouse', 'CarryAway', 'RestaurantLessThan20', 'Restaurant20To50'). These missing values will need to be addressed during further analysis. Below is a sample info on the dataset. 
+The investigation revealed some missing values in attributes related to different coupon types (e.g., 'Bar', 'CoffeeHouse', 'CarryAway', 'RestaurantLessThan20', 'Restaurant20To50'). These missing values will need to be addressed during further analysis. Below is a sample info on the dataset.
 
 ![Dataset Info](data/Visualizations/data_info.png)
-
 
 The dataset provides valuable insights into user behavior and preferences, with detailed information on various driving scenarios and coupon acceptance. Key observations include:
 
@@ -32,64 +30,66 @@ The majority of destinations are categorized as 'No Urgent Place,' with passenge
 Sunny weather is predominant, and the temperature distribution is skewed towards 80 degrees Fahrenheit.
 The dataset comprises coupons for different establishments, with 'Coffee House' being the most prevalent, followed by 'Restaurant(<20)', 'Carry out & Take away', 'Bar', and 'Restaurant(20-50)'. Subsequently, missing values in the 'Bar', 'CoffeeHouse', 'CarryAway', 'RestaurantLessThan20', and 'Restaurant20To50' columns were identified. The decision to drop the 'car' attribute was also justified, given the significant number of missing values.
 
-Look the screenshots of the results below. The first image on the left shows the attributes with null values where we can observe the car attribute only contains 108 non-null values. It is clear this attribute will not be useful to our analysis. The image on the right shows the remaining attributes with null values after removing car feature. 
+Look the screenshots of the results below. The first image on the left shows the attributes with null values where we can observe the car attribute only contains 108 non-null values. It is clear this attribute will not be useful to our analysis. The image on the right shows the remaining attributes with null values after removing car feature.
 
-![Attributes with null values](data/Visualizations/Car%20Null%20values.png)                   ![After Car was removed](data/Visualizations/Attributes%20w:%20NAs%20After.png)
+![Attributes with null values](data/Visualizations/Car%20Null%20values.png) ![After Car was removed](data/Visualizations/Attributes%20w:%20NAs%20After.png)
 
-Further preprocessing steps included cleaning the 'passenger' column by removing parentheses and converting the 'temperature' column to a numerical format. In terms of coupon acceptance, approximately 56.8% of the total observations chose to accept the coupon, indicating a moderate acceptance rate. 
+Further preprocessing steps included cleaning the 'passenger' column by removing parentheses and converting the 'temperature' column to a numerical format. In terms of coupon acceptance, approximately 56.8% of the total observations chose to accept the coupon, indicating a moderate acceptance rate.
 
 ![Count of Coupons Accepted Histogram](data/Visualizations/Coupons%20accepted%20hist.png)
 
-
-To visually represent the data, a bar plot was used to visualize the count of accepted coupons for each coupon type, providing a clear overview of user preferences. 
+To visually represent the data, a bar plot was used to visualize the count of accepted coupons for each coupon type, providing a clear overview of user preferences.
 
 ![count of Coupon type accepted](data/Visualizations/CouponType%20Coupon%20accepted.png)
 
-
 This initial analysis sets the stage for a deeper exploration of factors influencing coupon acceptance, addressing missing values, and uncovering patterns within the dataset. Further steps will involve statistical summaries, exploratory data analysis, and the development of insights to distinguish between customers who accepted and those who did not accept driving coupons.
-
 
 ## Investigating the Bar Coupons
 
 In this section, the focus was on exploring the behavior of customers who accepted bar-related coupons. The following key analyses were conducted:
 
-Creating a Subset for Bar Coupons:
+#### Creating a subset for Bar Coupons:
+
 A new DataFrame was created specifically for customers who chose bar-related coupons. This subset included various attributes such as destination, passenger type, weather conditions, temperature, time, and more.
 
-Proportion of Bar Coupons Accepted:
+#### Proportion of Bar Coupons Accepted:
+
 The proportion of bar coupons that were accepted was calculated. Approximately 41.0% of the customers who received bar coupons accepted them. The acceptance rates were compared between customers who visited bars three or fewer times a month and those who visited more frequently. A clear distinction emerged, with a higher acceptance rate (76.88%) observed among customers who frequented bars more often.
 
 ![Coupons accepted for range of times drivers visited the bar monthly](data/Visualizations/Time%20went%20to%20bar.png)
 
-Comparing Acceptance Rates Based on Age and bar visits frequency:
+#### Comparing Acceptance Rates Based on Age and bar visits frequency:
+
 The acceptance rates were compared between drivers who visited bars and were above 25 years old versus those who were below 25. The results indicated that older drivers had a higher acceptance rate (54.06%).
 
 ![Bar Goers over 25 Vs. Inverse](data/Visualizations/Bar%20Goers%20over%2025.png)
 
+#### Comparing Acceptance Rates Based on Family and Occupation:
 
-Comparing Acceptance Rates Based on Family and Occupation:
 Acceptance rates were compared between drivers who visited bars without kids and had occupations other than farming, fishing, and forestry, and others. The former group exhibited a higher acceptance rate (59.09%).
 
-Comparing Acceptance Rates Based on Multiple Criteria:
+#### Comparing Acceptance Rates Based on Multiple Criteria:
+
 Acceptance rates were compared based on a combination of criteria, including frequency of bar visits, age, family status, and occupation. The acceptance rate for this filtered subset was 55.79%, surpassing the overall acceptance rate.
 
-Hypotheses Formulation:
+#### Hypotheses Formulation:
+
 Hypotheses were formulated based on the observed patterns:
 
 Hypothesis 1: Drivers who visit bars more frequently are more likely to accept bar coupons.
 Hypothesis 2: Older drivers (over 25) are more inclined to accept bar coupons.
 Hypothesis 3: Drivers without family responsibilities and those in specific occupations are more receptive to bar coupons.
 Hypothesis 4: The given criteria, combining age, bar visit frequency, family, and occupation, can predict a higher acceptance rate for bar coupons.
-Statistical Techniques:
+Statistical Techniques: 
 
 Descriptive statistics were utilized to summarize and explore key attributes of the dataset.
 Comparison of acceptance rates involved calculating mean acceptance rates for different groups.
 Results and Conclusions:
 The analysis revealed significant patterns in the acceptance of bar coupons among different customer segments. Frequent bar visits, older age, absence of family responsibilities, and specific occupations were associated with higher acceptance rates. The formulated hypotheses provide a foundation for further testing and validation.
 
-Next Steps:
-Further statistical testing, such as hypothesis testing and regression analysis, can be employed to validate the observed patterns and assess the significance of the identified factors in predicting bar coupon acceptance. Additionally, qualitative insights or customer surveys may provide deeper understanding and context to the observed behavior.
+#### Next Steps:
 
+Further statistical testing, such as hypothesis testing and regression analysis, can be employed to validate the observed patterns and assess the significance of the identified factors in predicting bar coupon acceptance. Additionally, qualitative insights or customer surveys may provide deeper understanding and context to the observed behavior.
 
 ## Investigation on Coffee House Coupon
 
