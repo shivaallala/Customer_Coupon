@@ -162,30 +162,66 @@ Income ranges were grouped, and the acceptance rate for each range was calculate
 
 ![Coffee House coupon acceptance rate by driver income range](data/Visualizations/Coffee%20Coupon%20Visuals/Ch%20acceptance%20rate%20by%20Income.png)
 
+#### Passenger Analysis 
+
+##### 1. Coupon Acceptance Rate Based on the Type of Passenger Present:
+
+Based on the current data, the driver is more likely to accept the coffee house coupon when they are riding with their friends or partner. The bar graph below represents the coffee house coupon acceptance rate of drivers based on passenger category. 
+
+![Coupon acceptance rate by Passenger Type](data/Visualizations/Coffee%20Coupon%20Visuals/accept%20rate%20by%20Passenger%20tpe.png)
 
 
+##### 2. How likely are driver to accept the coupon when they have kids in the car and are going no place urgent vs going home.
+
+The analysis here was aimed to explore the likelihood of drivers accepting coupons when they have kids in the car, distinguishing between trips to non-urgent places and going home or to work. Two subsets were created for drivers with kids, one for trips to non-urgent places ('No Urgent Place') and another for trips to home or work destinations. The acceptance rates for both scenarios were calculated and displayed.
+
+However, an unexpected result was observed. The analysis revealed an acceptance rate of 48.31% for drivers with kids going to non-urgent places, but a "NaN%" (Not a Number) acceptance rate for drivers with kids going home. Upon further investigation, it was discovered that there were no instances of kid passengers when drivers were heading home or to work. The dataset for 'Home' and 'Work' destinations showed that all passengers in those scenarios were either alone or with a partner, and no kids were present.
+
+![No kids when subsetting data for passenger by 'Home' or 'work' destination](data/Visualizations/Coffee%20Coupon%20Visuals/No%20kids%20when%20Driving%20home.png)
+
+This unexpected outcome highlights the importance of carefully inspecting the data before drawing conclusions. In this case, the absence of kid passengers during home or work trips influenced the acceptance rate calculation and emphasizes the need to ensure that the dataset aligns with the assumptions and objectives of the analysis.
 
 
+##### 3. Coupon acceptance rate for each destination by passenger.
 
-Lowest vs. Highest Acceptance Rate for Each Attribute Subset:
+The grouped bar plot provides a comprehensive visual overview of the coupon acceptance rate based on the type of passenger present, categorized by the destination. This analysis offers valuable insights into the dynamics of coupon acceptance behavior among drivers in different scenarios.Observing the bar plot, it becomes evident that when drivers are heading to work, the predominant trend is driving alone, aligning seamlessly with real-world expectations. Similarly, when driving home, the majority either travels alone or with kids, emphasizing a clear pattern of behavior during homeward journeys.
 
-Coupon acceptance rates were calculated for various attributes like destination, passenger, weather, etc.
-Subsets with the lowest and highest acceptance rates for each attribute were identified and overall acceptance rates were compared.
-Coupon Acceptance Rate Based on the Type of Passenger Present:
+![Coupon Acceptance rate for each passenger by destination](data/Visualizations/Coffee%20Coupon%20Visuals/Destination%20by%20passenger%20rate.png)
 
-Acceptance rates were calculated for different passenger types, and a bar plot was created.
-Coupon Acceptance Rate for Drivers with Kids Based on Destination:
+Examining trips to non-urgent places, the distribution of passenger types shows a more varied pattern, suggesting a diversity of circumstances when drivers are not bound by specific time constraints. Interestingly, the acceptance rate of coupons appears to be higher when drivers are going to non-urgent places accompanied by a friend or driving alone. This could imply that, during leisurely outings, drivers may be more receptive to coupon offers when in the company of friends or enjoying solitude. Conversely, the lowest coupon acceptance rate is observed when drivers are heading home alone. This intriguing finding prompts speculation about the potential real-life reasons behind this trend. It may be indicative of a psychological state associated with the desire for solitude or relaxation when returning home, where drivers might be less inclined to engage with promotional offers. 
 
-Subset analysis was performed for drivers with kids going to "No Urgent Place" and "Home."
-Acceptance rates for these subsets were calculated.
-Distribution of Passenger Types by Gender:
+In summary, this nuanced analysis sheds light on the intricate relationship between passenger type, destination, and coupon acceptance. The observed patterns not only align with common expectations but also provide a deeper understanding of how drivers' behaviors and preferences manifest in coupon acceptance rates. The insights gained from this exploration can be leveraged for more targeted and effective coupon marketing strategies, catering to the diverse scenarios encountered by drivers in their daily routines.
 
-A violin plot was used to represent the distribution of passenger types by the gender of the driver.
-Relationship Between Age of the Driver and Type of Passenger Present:
 
-A boxplot was created to show the distribution of ages for different passenger types.
-A bar plot was generated to depict the coupon acceptance rate by age and passenger type.
-Income vs. Occupation by Passenger's Coupon Acceptance Rate:
+##### 4. Does gender of the driver play a role in what kind of passengers are present.
 
-Unique boxplots were created for each passenger group to visualize the relationship between income, occupation, and coupon acceptance.
-Overall, the analysis provides insights into various factors influencing coupon acceptance rates, including income, occupation, age, gender, and passenger type. It helps in understanding patterns and preferences among drivers in relation to Coffee House coupons.
+The violin plot, skillfully employed to visualize the distribution of passengers by the gender of the driver, provides a nuanced understanding of the relationship between these variables. The plot, depicted on a pastel palette for clarity, reveals intriguing insights into passenger demographics based on driver gender.
+
+![Distribution of passenger types by gender of driver](data/Visualizations/Coffee%20Coupon%20Visuals/Violin%20plot%20for%20gender.png)
+
+Upon close inspection, the violin plot suggests that gender exerts minimal influence on the types of passengers present. The distribution of passenger types appears comparable for both male and female drivers, indicating a degree of uniformity in passenger demographics across genders. However, a subtle yet discernible trend emerges – female drivers tend to have a slightly higher likelihood of having kids as passengers compared to their male counterparts. While this difference may not be statistically significant, it adds a layer of nuance to the analysis.
+
+In essence, the violin plot underscores the lack of substantial gender-based variations in the distribution of passenger types, affirming a general similarity in the composition of passengers irrespective of the driver's gender. The noteworthy observation regarding a slightly elevated presence of kids with female drivers adds a nuanced touch to the analysis, hinting at potential areas for further exploration in understanding passenger dynamics in the context of gender-specific driving scenarios.
+
+
+##### 4. Is there any kind of relationship between age of the drive and the type of passenger present
+
+The boxplot analysis delves into the distribution of ages across different passenger types, providing a comprehensive view of the central tendency and variability in the dataset.
+
+![Age by passenger type](data/Visualizations/Coffee%20Coupon%20Visuals/Boxplot%20age%20by%20passenger%20type%20summary.png)
+
+For passengers categorized as 'Kid,' the median age is centered around 36, with the interquartile range (IQR) spanning from approximately 31 (Q1) to 41 (Q3). This suggests that a significant proportion of drivers with kids as passengers fall within this age range, indicating a moderate spread in the distribution. When drivers are alone, the boxplot reveals a median age of 31, with a notable IQR extending from 21 to 41. This distribution implies that the age of drivers with no passengers displays a relatively wide spread, encompassing a diverse range of age groups. For passengers designated as 'Partner,' the median age is notably lower at 25, with an IQR ranging from 21 to 35. This suggests a younger age profile for drivers when accompanied by a partner, reflecting a concentrated distribution around the lower end of the age spectrum. The 'Friends' category exhibits a median age of 31, mirroring the distribution observed when drivers are alone. The IQR extends from 21 to 41, suggesting a similarity in age distribution when friends are present, akin to the scenario of a lone driver.
+
+It's crucial to note that the dataset includes values such as '50Above' and 'Below21,' representing age ranges rather than specific values. As a result, these entries may not precisely represent individual ages but rather age brackets. In summary, the boxplot analysis provides a nuanced understanding of age distribution across various passenger types.
+
+The exploration of Coupon Acceptance Rate by Age and Passenger Type unveils intriguing patterns that can be dissected from a statistical standpoint. Employing a barplot visualization, we examined how different age groups responded to coffee house coupons based on whether they were alone, with friends, kids, or a partner.
+
+![Coupon acceptance rate by age and passenger type](data/Visualizations/Coffee%20Coupon%20Visuals/Age%20by%20passenger%20type.png)
+
+One striking trend is the high acceptance rate among drivers aged 20 when accompanied by friends (85.37%) or kids (84.21%). This prompts us to consider the statistical significance of these differences, perhaps through a hypothesis test, to ascertain whether these observed variations in acceptance rates are likely due to chance or if they indeed reflect meaningful distinctions in the population.
+
+Additionally, as age increases from 26 to 46, there's a general decline in acceptance rates, emphasizing the need to perform regression analysis or correlation testing to explore the strength and direction of any potential relationships between age and acceptance rates. Further, the notable surge in acceptance rates for drivers aged 46 with a partner (84.62%) calls for deeper investigation, potentially involving chi-squared tests to understand the association between age, relationship status, and coupon responsiveness.
+
+The consistent influence of social factors like the presence of friends or kids on higher acceptance rates prompts the exploration of interaction effects through more advanced statistical techniques like ANOVA or regression modeling. These analyses would allow us to quantify the impact of each variable while accounting for the potential confounding effects of others.
+
+
