@@ -52,11 +52,14 @@ In this section, the focus was on exploring the behavior of customers who accept
 
 A new DataFrame was created specifically for customers who chose bar-related coupons. This subset included various attributes such as destination, passenger type, weather conditions, temperature, time, and more.
 
+
 #### Proportion of Bar Coupons Accepted:
 
 The proportion of bar coupons that were accepted was calculated. Approximately 41.0% of the customers who received bar coupons accepted them. The acceptance rates were compared between customers who visited bars three or fewer times a month and those who visited more frequently. A clear distinction emerged, with a higher acceptance rate (76.88%) observed among customers who frequented bars more often.
 
 ![Coupons accepted for range of times drivers visited the bar monthly](data/Visualizations/Time%20went%20to%20bar.png)
+
+
 
 #### Comparing Acceptance Rates Based on Age and bar visits frequency:
 
@@ -64,22 +67,30 @@ The acceptance rates were compared between drivers who visited bars and were abo
 
 ![Bar Goers over 25 Vs. Inverse](data/Visualizations/Bar%20Goers%20over%2025.png)
 
+
+
 #### Comparing Acceptance Rates Based on Family and Occupation:
 
-Acceptance rates were compared between drivers who visited bars without kids and had occupations other than farming, fishing, and forestry, and others. The former group exhibited a higher acceptance rate (59.09%).
+Acceptance rates were compared between drivers who visited bars without kids and had occupations other than farming, fishing, and forestry, and others. The former group exhibited a higher acceptance rate (59.09%) while the inverse group exhibited a wopping low of 20.23 acceptance rate. 
+
+![Bar Goers (Non-Kids, Non-Farming Fishing Forestry)](data/Visualizations/bar%20goers%20non-kids.png)
 
 #### Comparing Acceptance Rates Based on Multiple Criteria:
 
-Acceptance rates were compared based on a combination of criteria, including frequency of bar visits, age, family status, and occupation. The acceptance rate for this filtered subset was 55.79%, surpassing the overall acceptance rate.
+Acceptance rates were compared based on a combination of criteria, including frequency of bar visits, age, family status, maritial status, and income. The acceptance rate for this filtered subset was relatively close to the average acceptance rate of the bar coupon accpetance rate but surpassing the overall acceptance rate. Acceptance rate for all Cusotmers of Bar Coupon is 41.00%. Acceptance rate based on the given criteria above is 43.46%
 
-#### Hypotheses Formulation:
+![representing the coupon acceptance rate between the criteria and the total acceptanc rate](data/Visualizations/Given%20Criteria%20q6.png)
+
+
+### Hypotheses Formulation:
 
 Hypotheses were formulated based on the observed patterns:
 
-Hypothesis 1: Drivers who visit bars more frequently are more likely to accept bar coupons.
-Hypothesis 2: Older drivers (over 25) are more inclined to accept bar coupons.
-Hypothesis 3: Drivers without family responsibilities and those in specific occupations are more receptive to bar coupons.
-Hypothesis 4: The given criteria, combining age, bar visit frequency, family, and occupation, can predict a higher acceptance rate for bar coupons.
+Hypothesis 1: Drivers who visit bars more frequently are more likely to accept bar coupons.<br>
+Hypothesis 2: Older drivers (over 25) are more inclined to accept bar coupons.<br>
+Hypothesis 3: Drivers without family responsibilities and those in specific occupations are more receptive to bar coupons.<br>
+Hypothesis 4: The given criteria, combining age, bar visit frequency, family, and occupation, can predict a higher acceptance rate for bar coupons.<br>
+
 Statistical Techniques: 
 
 Descriptive statistics were utilized to summarize and explore key attributes of the dataset.
