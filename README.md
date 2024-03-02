@@ -81,6 +81,7 @@ Acceptance rates were compared based on a combination of criteria, including fre
 
 ![representing the coupon acceptance rate between the criteria and the total acceptanc rate](data/Visualizations/Given%20Criteria%20q6.png)
 
+<br>
 
 ### Hypotheses Formulation:
 
@@ -102,18 +103,31 @@ The analysis revealed significant patterns in the acceptance of bar coupons amon
 
 Further statistical testing, such as hypothesis testing and regression analysis, can be employed to validate the observed patterns and assess the significance of the identified factors in predicting bar coupon acceptance. Additionally, qualitative insights or customer surveys may provide deeper understanding and context to the observed behavior.
 
+<br>
+<br>
+
 ## Investigation on Coffee House Coupon
 
 ### Data Exploration and Transformation
 
-In this section, the analysis focused on the Coffee House coupon data, exploring the characteristics of passengers who accept these coupons. The process involved data exploration, transformation, and acceptance rate calculations for various attributes.
+In this section, the analysis focused on the Coffee House coupon data, exploring the characteristics of passengers who accept these coupons. The process involved data exploration, transformation, and acceptance rate calculations for various attributes. A new DataFrame, ch, was created containing only data related to the Coffee House coupon.
 
-Data Exploration and Transformation:
+The CoffeeHouse features contains 5 unique frequency ranges of visits made to the coffee house. The missing values in the 'CoffeeHouse' column were identified and filled based on the proportions of existing categories. The image on the left displays the proportions of each coffee house category before the null data points were filled. The image on the right display the proportions after the null data points were filled based on the proportions of existing categories. 
 
-A new DataFrame, ch, was created containing only data related to the Coffee House coupon.
-Missing values in the 'CoffeeHouse' column were identified and filled based on the proportions of existing categories.
-A new column, 'income_level,' was created to standardize income ranges for further analysis.
-Acceptance Rate Grouped by Each Attribute:
+![Before Nulls filled](data/Visualizations/Coffee%20Coupon%20Visuals/CoffeeHouse%20Proportions%20before.png) ![After Nulls Filled](data/Visualizations/Coffee%20Coupon%20Visuals/Coffeehouse%20Prop%20After%20Nulls%20filled.png)
+
+Below is a distribution plot to show the consistency even after the null values were filled. 
+
+![CoffeeHouse Attribute distribution before and After Null data points filled](data/Visualizations/Coffee%20Coupon%20Visuals/CoffeeHouse%20attrb%20Distribution.png)
+
+#### Income level
+
+A new column, 'income_level' was derived from income attribute to standardize income ranges for further analysis. The income feature is a categorical varible that would be difficult to use when determining the scale of the drivers financial status.
+
+![Income Level display](data/Visualizations/Coffee%20Coupon%20Visuals/Income_level.png)
+
+
+#### Acceptance Rate Grouped by Each Attribute:
 
 The acceptance rate for the Coffee House coupon was calculated for each attribute in the dataset.
 The unique value with the lowest and highest acceptance rates for each attribute was identified.
