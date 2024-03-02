@@ -30,7 +30,7 @@ The majority of destinations are categorized as 'No Urgent Place,' with passenge
 Sunny weather is predominant, and the temperature distribution is skewed towards 80 degrees Fahrenheit.
 The dataset comprises coupons for different establishments, with 'Coffee House' being the most prevalent, followed by 'Restaurant(<20)', 'Carry out & Take away', 'Bar', and 'Restaurant(20-50)'. Subsequently, missing values in the 'Bar', 'CoffeeHouse', 'CarryAway', 'RestaurantLessThan20', and 'Restaurant20To50' columns were identified. The decision to drop the 'car' attribute was also justified, given the significant number of missing values.
 
-Look the screenshots of the results below. The first image on the left shows the attributes with null values where we can observe the car attribute only contains 108 non-null values. It is clear this attribute will not be useful to our analysis. The image on the right shows the remaining attributes with null values after removing car feature.
+Look the screenshots of the results below. The first image on the left shows the attributes with null values where we can observe the car attribute only contains 108 non-null values. It is clear this attribute will not be useful to our analysis. The image on the right shows the remaining attributes with null values after removing the car attribute.
 
 ![Attributes with null values](data/Visualizations/Car%20Null%20values.png) ![After Car was removed](data/Visualizations/Attributes%20w:%20NAs%20After.png)
 
@@ -38,15 +38,15 @@ Further preprocessing steps included cleaning the 'passenger' column by removing
 
 ![Count of Coupons Accepted Histogram](data/Visualizations/Coupons%20accepted%20hist.png)
 
-To visually represent the data, a bar plot was used to visualize the count of accepted coupons for each coupon type, providing a clear overview of user preferences.
+To visually represent the data, a bar plot was used to visualize the count of accepted coupons for each coupon type, providing a clear overview of user preferences. As well as the representation of count of coupons that were not accepted, displayed on the right. 
 
-![count of Coupon type accepted](data/Visualizations/CouponType%20Coupon%20accepted.png)
+![count of Coupon type accepted](data/Visualizations/CouponType%20Coupon%20accepted.png) ![Not Accpeted](data/Visualizations/Reject%20Coupons.png)
 
 This initial analysis sets the stage for a deeper exploration of factors influencing coupon acceptance, addressing missing values, and uncovering patterns within the dataset. Further steps will involve statistical summaries, exploratory data analysis, and the development of insights to distinguish between customers who accepted and those who did not accept driving coupons.
 
 ## Investigating the Bar Coupons
 
-In this section, the focus was on exploring the behavior of customers who accepted bar-related coupons. The following key analyses were conducted:
+In this section, the focus was on exploring the behavior of customers who accepted bar-related coupons. The following key analysis were conducted:
 
 #### Creating a subset for Bar Coupons:
 
@@ -57,7 +57,7 @@ A new DataFrame was created specifically for customers who chose bar-related cou
 
 The proportion of bar coupons that were accepted was calculated. Approximately 41.0% of the customers who received bar coupons accepted them. The acceptance rates were compared between customers who visited bars three or fewer times a month and those who visited more frequently. A clear distinction emerged, with a higher acceptance rate (76.88%) observed among customers who frequented bars more often.
 
-![Coupons accepted for range of times drivers visited the bar monthly](data/Visualizations/Time%20went%20to%20bar.png)
+![Bar attendance acceptance rate](data/Visualizations/Coffee%20Coupon%20Visuals/Bar%20attendance%20ACcepeted%20rate.png)   ![Coupons accepted for range of times drivers visited the bar monthly](data/Visualizations/Time%20went%20to%20bar.png)
 
 
 
@@ -226,7 +226,7 @@ The consistent influence of social factors like the presence of friends or kids 
 
 ##### 6. Income vs Occupation by Passengers Coupon acceptance rate analysis
 
-The exploration of coffee house coupon acceptance among drivers, categorized by passenger type and occupation, reveals intricate patterns that contribute to understanding the nuanced decision-making process. 
+The exploration of coffee house coupon acceptance among drivers, categorized by passenger type and occupation, through a boxplot reveals intricate patterns that contribute to understanding the nuanced decision-making process. 
 
 Here's a comprehensive summary:
 
