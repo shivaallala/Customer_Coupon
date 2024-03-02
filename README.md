@@ -48,12 +48,12 @@ This initial analysis sets the stage for a deeper exploration of factors influen
 
 In this section, the focus was on exploring the behavior of customers who accepted bar-related coupons. The following key analysis were conducted:
 
-#### Creating a subset for Bar Coupons:
+### Creating a subset for Bar Coupons:
 
 A new DataFrame was created specifically for customers who chose bar-related coupons. This subset included various attributes such as destination, passenger type, weather conditions, temperature, time, and more.
 
 
-#### Proportion of Bar Coupons Accepted:
+### Proportion of Bar Coupons Accepted:
 
 The proportion of bar coupons that were accepted was calculated. Approximately 41.0% of the customers who received bar coupons accepted them. The acceptance rates were compared between customers who visited bars three or fewer times a month and those who visited more frequently. A clear distinction emerged, with a higher acceptance rate (76.88%) observed among customers who frequented bars more often.
 
@@ -61,7 +61,7 @@ The proportion of bar coupons that were accepted was calculated. Approximately 4
 
 
 
-#### Comparing Acceptance Rates Based on Age and bar visits frequency:
+### Comparing Acceptance Rates Based on Age and bar visits frequency:
 
 The acceptance rates were compared between drivers who visited bars and were above 25 years old versus those who were below 25. The results indicated that older drivers had a higher acceptance rate (54.06%). Although the 'others' were drivers who never visit the bar and under 25 years old, surprisingly they accept the coupon about 22% of the time. An eyebrow raise, as a coupon can influence someone to go to the bar. 
 
@@ -69,13 +69,13 @@ The acceptance rates were compared between drivers who visited bars and were abo
 
 
 
-#### Comparing Acceptance Rates Based on Family and Occupation:
+### Comparing Acceptance Rates Based on Family and Occupation:
 
 Acceptance rates were compared between drivers who visited bars without kids and had occupations other than farming, fishing, and forestry, and others. The former group exhibited a higher acceptance rate (59.09%) while the inverse group exhibited a wopping low of 20.23 acceptance rate. 
 
 ![Bar Goers (Non-Kids, Non-Farming Fishing Forestry)](data/Visualizations/bar%20goers%20non-kids.png)
 
-#### Comparing Acceptance Rates Based on Multiple Criteria:
+### Comparing Acceptance Rates Based on Multiple Criteria:
 
 Acceptance rates were compared based on a combination of criteria, including frequency of bar visits, age, family status, maritial status, and income. The acceptance rate for this filtered subset was relatively close to the average acceptance rate of the bar coupon accpetance rate but surpassing the overall acceptance rate. Acceptance rate for all Cusotmers of Bar Coupon is 41.00%. Acceptance rate based on the given criteria above is 43.46%
 
@@ -83,7 +83,7 @@ Acceptance rates were compared based on a combination of criteria, including fre
 
 <br>
 
-### Hypotheses Formulation:
+## Hypotheses Formulation:
 
 Hypotheses were formulated based on the observed patterns:
 
@@ -99,7 +99,7 @@ Comparison of acceptance rates involved calculating mean acceptance rates for di
 Results and Conclusions:
 The analysis revealed significant patterns in the acceptance of bar coupons among different customer segments. Frequent bar visits, older age, absence of family responsibilities, and specific occupations were associated with higher acceptance rates. The formulated hypotheses provide a foundation for further testing and validation.
 
-#### Next Steps:
+### Next Steps:
 
 Further statistical testing, such as hypothesis testing and regression analysis, can be employed to validate the observed patterns and assess the significance of the identified factors in predicting bar coupon acceptance. Additionally, qualitative insights or customer surveys may provide deeper understanding and context to the observed behavior.
 
@@ -120,23 +120,23 @@ Below is a distribution plot to show the consistency even after the null values 
 
 ![CoffeeHouse Attribute distribution before and After Null data points filled](data/Visualizations/Coffee%20Coupon%20Visuals/CoffeeHouse%20attrb%20Distribution.png)
 
-#### Income level
+### Income level
 
 A new column, 'income_level' was derived from income attribute to standardize income ranges for further analysis. The income feature is a categorical varible that would be difficult to use when determining the scale of the drivers financial status.
 
 ![Income Level display](data/Visualizations/Coffee%20Coupon%20Visuals/Income_level.png)
 
 
-#### Proportion of Coffee House Coupons accepted. 
+### Proportion of Coffee House Coupons accepted. 
 
 Within the Coffee House coupon sub-dataset, we find that only 49.92% of the drivers accepted the coupons. Please see below histogram. 
 
 ![Count of Coffee house Coupons accepted](data/Visualizations/Coffee%20Coupon%20Visuals/Count%20Of%20CH%20coupons%20accepted.png)
 
 
-### Analysis
+# Coffee Coupon Analysis
 
-#### Coupon Acceptance Rate based on the Number of Times Driver Goes to the Coffee House Monthly:
+### Coupon Acceptance Rate based on the Number of Times Driver Goes to the Coffee House Monthly:
 
 Drivers who tend to to the coffee house 1 time or less or far more likely to decline the coupon to the coffee house than drivers who go to the coffee house more than once. Colored stacked bar graph represents this perfectly. The graph to show proportion of coupon acceptance for each category of Coffee House feature also validates the hypothesis.
 Stacked color bar graph was created to show the count of coupons for each category (accepted and not accepted) based on the number of times a driver goes to the coffee house monthly.
@@ -148,9 +148,9 @@ The acceptance rate by the number of times a driver goes to the coffee house.
 ![Coffee House visits acceptance rate for each category](data/Visualizations/Coffee%20Coupon%20Visuals/CoffeeHouse%20visits%20acceptance%20rate.png)
 
 
-#### Income Analysis
+### Income Analysis
 
-##### Coupon Acceptance Rate for Less than Average Income vs. Greater than Average Income:
+#### Coupon Acceptance Rate for Less than Average Income vs. Greater than Average Income:
 
 The average income range was determined. Coupon acceptance rates were calculated for drivers with less than average income and drivers with more than average income. This is a perfect senario where the created feature income level was used. The income level feature allows us to calculate the average income range which was 50000 - 62499. As the Income feature is categorical, calculating the average income range directly would have been a challenge. <br>
 
@@ -162,16 +162,16 @@ Income ranges were grouped, and the acceptance rate for each range was calculate
 
 ![Coffee House coupon acceptance rate by driver income range](data/Visualizations/Coffee%20Coupon%20Visuals/Ch%20acceptance%20rate%20by%20Income.png)
 
-#### Passenger Analysis 
+### Passenger Analysis 
 
-##### 1. Coupon Acceptance Rate Based on the Type of Passenger Present:
+#### 1. Coupon Acceptance Rate Based on the Type of Passenger Present:
 
 Based on the current data, the driver is more likely to accept the coffee house coupon when they are riding with their friends or partner. The bar graph below represents the coffee house coupon acceptance rate of drivers based on passenger category. 
 
 ![Coupon acceptance rate by Passenger Type](data/Visualizations/Coffee%20Coupon%20Visuals/accept%20rate%20by%20Passenger%20tpe.png)
 
 
-##### 2. How likely are driver to accept the coupon when they have kids in the car and are going no place urgent vs going home.
+#### 2. How likely are driver to accept the coupon when they have kids in the car and are going no place urgent vs going home.
 
 The analysis here was aimed to explore the likelihood of drivers accepting coupons when they have kids in the car, distinguishing between trips to non-urgent places and going home or to work. Two subsets were created for drivers with kids, one for trips to non-urgent places ('No Urgent Place') and another for trips to home or work destinations. The acceptance rates for both scenarios were calculated and displayed.
 
@@ -182,7 +182,7 @@ However, an unexpected result was observed. The analysis revealed an acceptance 
 This unexpected outcome highlights the importance of carefully inspecting the data before drawing conclusions. In this case, the absence of kid passengers during home or work trips influenced the acceptance rate calculation and emphasizes the need to ensure that the dataset aligns with the assumptions and objectives of the analysis.
 
 
-##### 3. Coupon acceptance rate for each destination by passenger.
+#### 3. Coupon acceptance rate for each destination by passenger.
 
 The grouped bar plot provides a comprehensive visual overview of the coupon acceptance rate based on the type of passenger present, categorized by the destination. This analysis offers valuable insights into the dynamics of coupon acceptance behavior among drivers in different scenarios.Observing the bar plot, it becomes evident that when drivers are heading to work, the predominant trend is driving alone, aligning seamlessly with real-world expectations. Similarly, when driving home, the majority either travels alone or with kids, emphasizing a clear pattern of behavior during homeward journeys.
 
@@ -193,7 +193,7 @@ Examining trips to non-urgent places, the distribution of passenger types shows 
 In summary, this nuanced analysis sheds light on the intricate relationship between passenger type, destination, and coupon acceptance. The observed patterns not only align with common expectations but also provide a deeper understanding of how drivers' behaviors and preferences manifest in coupon acceptance rates. The insights gained from this exploration can be leveraged for more targeted and effective coupon marketing strategies, catering to the diverse scenarios encountered by drivers in their daily routines.
 
 
-##### 4. Does gender of the driver play a role in what kind of passengers are present.
+#### 4. Does gender of the driver play a role in what kind of passengers are present.
 
 The violin plot, skillfully employed to visualize the distribution of passengers by the gender of the driver, provides a nuanced understanding of the relationship between these variables. The plot, depicted on a pastel palette for clarity, reveals intriguing insights into passenger demographics based on driver gender.
 
@@ -204,7 +204,7 @@ Upon close inspection, the violin plot suggests that gender exerts minimal influ
 In essence, the violin plot underscores the lack of substantial gender-based variations in the distribution of passenger types, affirming a general similarity in the composition of passengers irrespective of the driver's gender. The noteworthy observation regarding a slightly elevated presence of kids with female drivers adds a nuanced touch to the analysis, hinting at potential areas for further exploration in understanding passenger dynamics in the context of gender-specific driving scenarios.
 
 
-##### 5. Is there any kind of relationship between age of the drive and the type of passenger present
+#### 5. Is there any kind of relationship between age of the drive and the type of passenger present
 
 The boxplot analysis delves into the distribution of ages across different passenger types, providing a comprehensive view of the central tendency and variability in the dataset.
 
@@ -224,7 +224,7 @@ Additionally, as age increases from 26 to 46, there's a general decline in accep
 
 The consistent influence of social factors like the presence of friends or kids on higher acceptance rates prompts the exploration of interaction effects through more advanced statistical techniques like ANOVA or regression modeling. These analyses would allow us to quantify the impact of each variable while accounting for the potential confounding effects of others.
 
-##### 6. Income vs Occupation by Passengers Coupon acceptance rate analysis
+#### 6. Income vs Occupation by Passengers Coupon acceptance rate analysis
 
 The exploration of coffee house coupon acceptance among drivers, categorized by passenger type and occupation, through a boxplot reveals intricate patterns that contribute to understanding the nuanced decision-making process. 
 
