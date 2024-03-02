@@ -32,13 +32,18 @@ The majority of destinations are categorized as 'No Urgent Place,' with passenge
 Sunny weather is predominant, and the temperature distribution is skewed towards 80 degrees Fahrenheit.
 The dataset comprises coupons for different establishments, with 'Coffee House' being the most prevalent, followed by 'Restaurant(<20)', 'Carry out & Take away', 'Bar', and 'Restaurant(20-50)'. Subsequently, missing values in the 'Bar', 'CoffeeHouse', 'CarryAway', 'RestaurantLessThan20', and 'Restaurant20To50' columns were identified. The decision to drop the 'car' attribute was also justified, given the significant number of missing values.
 
-![Attributes with null values](data/Visualizations/Car%20Null%20values.png)                             ![After Car was removed](data/Visualizations/Attributes%20w:%20NAs%20After.png)
+Look the screenshots of the results below. The first image on the left shows the attributes with null values where we can observe the car attribute only contains 108 non-null values. It is clear this attribute will not be useful to our analysis. The image on the right shows the remaining attributes with null values after removing car feature. 
 
-Further preprocessing steps included cleaning the 'passenger' column by removing parentheses and converting the 'temperature' column to a numerical format. In terms of coupon acceptance, approximately 56.8% of the total observations chose to accept the coupon, indicating a moderate acceptance rate. To visually represent the data, a bar plot was used to visualize the count of accepted coupons for each coupon type, providing a clear overview of user preferences. Additionally, a histogram depicted the distribution of temperatures in the dataset, with a peak around 80 degrees Fahrenheit.
+![Attributes with null values](data/Visualizations/Car%20Null%20values.png)                   ![After Car was removed](data/Visualizations/Attributes%20w:%20NAs%20After.png)
 
-![count of Coupon type accepted](....)
+Further preprocessing steps included cleaning the 'passenger' column by removing parentheses and converting the 'temperature' column to a numerical format. In terms of coupon acceptance, approximately 56.8% of the total observations chose to accept the coupon, indicating a moderate acceptance rate. 
 
-![distinct temperature occurances](...)
+![Count of Coupons Accepted Histogram](data/Visualizations/Coupons%20accepted%20hist.png)
+
+
+To visually represent the data, a bar plot was used to visualize the count of accepted coupons for each coupon type, providing a clear overview of user preferences. 
+
+![count of Coupon type accepted](data/Visualizations/CouponType%20Coupon%20accepted.png)
 
 
 This initial analysis sets the stage for a deeper exploration of factors influencing coupon acceptance, addressing missing values, and uncovering patterns within the dataset. Further steps will involve statistical summaries, exploratory data analysis, and the development of insights to distinguish between customers who accepted and those who did not accept driving coupons.
@@ -52,13 +57,15 @@ Creating a Subset for Bar Coupons:
 A new DataFrame was created specifically for customers who chose bar-related coupons. This subset included various attributes such as destination, passenger type, weather conditions, temperature, time, and more.
 
 Proportion of Bar Coupons Accepted:
-The proportion of bar coupons that were accepted was calculated. Approximately 41.0% of the customers who received bar coupons accepted them.
+The proportion of bar coupons that were accepted was calculated. Approximately 41.0% of the customers who received bar coupons accepted them. The acceptance rates were compared between customers who visited bars three or fewer times a month and those who visited more frequently. A clear distinction emerged, with a higher acceptance rate (76.88%) observed among customers who frequented bars more often.
 
-Comparing Acceptance Rates Based on Frequency of Bar Visits:
-The acceptance rates were compared between customers who visited bars three or fewer times a month and those who visited more frequently. A clear distinction emerged, with a higher acceptance rate (76.88%) observed among customers who frequented bars more often.
+![Coupons accepted for range of times drivers visited the bar monthly](data/Visualizations/Time%20went%20to%20bar.png)
 
-Comparing Acceptance Rates Based on Age:
+Comparing Acceptance Rates Based on Age and bar visits frequency:
 The acceptance rates were compared between drivers who visited bars and were above 25 years old versus those who were below 25. The results indicated that older drivers had a higher acceptance rate (54.06%).
+
+![Bar Goers over 25 Vs. Inverse](data/Visualizations/Bar%20Goers%20over%2025.png)
+
 
 Comparing Acceptance Rates Based on Family and Occupation:
 Acceptance rates were compared between drivers who visited bars without kids and had occupations other than farming, fishing, and forestry, and others. The former group exhibited a higher acceptance rate (59.09%).
