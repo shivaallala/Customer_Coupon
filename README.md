@@ -134,7 +134,7 @@ Within the Coffee House coupon sub-dataset, we find that only 49.92% of the driv
 ![Count of Coffee house Coupons accepted](data/Visualizations/Coffee%20Coupon%20Visuals/Count%20Of%20CH%20coupons%20accepted.png)
 
 
-# Coffee Coupon Analysis
+# CoffeeHouse Coupon Analysis
 
 ### Coupon Acceptance Rate based on the Number of Times Driver Goes to the Coffee House Monthly:
 
