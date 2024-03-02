@@ -204,7 +204,7 @@ Upon close inspection, the violin plot suggests that gender exerts minimal influ
 In essence, the violin plot underscores the lack of substantial gender-based variations in the distribution of passenger types, affirming a general similarity in the composition of passengers irrespective of the driver's gender. The noteworthy observation regarding a slightly elevated presence of kids with female drivers adds a nuanced touch to the analysis, hinting at potential areas for further exploration in understanding passenger dynamics in the context of gender-specific driving scenarios.
 
 
-##### 4. Is there any kind of relationship between age of the drive and the type of passenger present
+##### 5. Is there any kind of relationship between age of the drive and the type of passenger present
 
 The boxplot analysis delves into the distribution of ages across different passenger types, providing a comprehensive view of the central tendency and variability in the dataset.
 
@@ -223,5 +223,64 @@ One striking trend is the high acceptance rate among drivers aged 20 when accomp
 Additionally, as age increases from 26 to 46, there's a general decline in acceptance rates, emphasizing the need to perform regression analysis or correlation testing to explore the strength and direction of any potential relationships between age and acceptance rates. Further, the notable surge in acceptance rates for drivers aged 46 with a partner (84.62%) calls for deeper investigation, potentially involving chi-squared tests to understand the association between age, relationship status, and coupon responsiveness.
 
 The consistent influence of social factors like the presence of friends or kids on higher acceptance rates prompts the exploration of interaction effects through more advanced statistical techniques like ANOVA or regression modeling. These analyses would allow us to quantify the impact of each variable while accounting for the potential confounding effects of others.
+
+##### 6. Income vs Occupation by Passengers Coupon acceptance rate analysis
+
+The exploration of coffee house coupon acceptance among drivers, categorized by passenger type and occupation, reveals intricate patterns that contribute to understanding the nuanced decision-making process. 
+
+Here's a comprehensive summary:
+
+![No Passengers analysis](data/Visualizations/Coffee%20Coupon%20Visuals/Alone%20Occupation.png)
+
+Alone:
+Occupation Insight:
+Arts Design Entertainment Sports & Media (ADESM): Diverse and creative individuals, varying income levels. Potential openness to experiences, suggesting moderate coupon acceptance.
+Healthcare Practitioners & Technical (HPT): Skewed toward higher incomes. Professional and stable, making them likely candidates for coupon acceptance.
+
+![Passenger are Friends](data/Visualizations/Coffee%20Coupon%20Visuals/Friends%20vs%20occupation.png)
+
+
+Friends:
+Occupation Dynamics:
+ADESM: Mirrors "Alone" group, indicating a social inclination. Similar diversity may suggest openness to group activities and coupons.
+HPT: Consistent incomes, implying financial stability within friend circles. Higher mean suggests favorable coupon acceptance.
+
+![Kids as passengers](data/Visualizations/Coffee%20Coupon%20Visuals/Kids%20vs%20Occupation.png)
+
+Kids:
+Occupation Characteristics:
+HPT: Limited data but notably high mean income. Likely professionals with a family. Potential acceptance due to higher income stability.
+
+![Partner as passenger](data/Visualizations/Coffee%20Coupon%20Visuals/Partner%20vs%20Occupation.png)
+
+Partner:
+Occupation Traits:
+Architecture & Engineering (A&E): Concentrated higher-income individuals. Likely professionals with financial stability, possibly more discerning coupon acceptance.
+Legal: Broader income range, including mid to high earners. Mix of professionals with varying financial backgrounds.
+<br>
+
+Global Insights:
+Income Level Consideration:
+Categorization: Reflects a strategic approach to understanding trends. Allows for generalized insights, emphasizing income patterns rather than exact figures.
+
+In-Depth Analysis:
+Occupational Impact:
+ADESM: Diverse income levels align with moderate acceptance. Creativity might influence openness to new experiences.
+HPT: Consistently higher incomes in "Friends" and "Kids." Stability and likely disposable income contribute to favorable coupon acceptance.
+
+Additional Considerations:
+Data Robustness: Interpretation relies on robust data representation. Limited "Kids" data necessitates cautious interpretation.
+Outliers: Their impact could skew interpretations. Further analysis needed to discern outliers' role in coupon acceptance.
+
+Conclusion and Inferences:
+Alone Group: Varied personalities and income levels suggest differing acceptance rates. Creativity and stability (especially in HPT) contribute positively.
+Friends Group: Social dynamics play a significant role. Consistent incomes boost acceptance, with ADESM and HPT likely driving positive responses.
+Kids Group: Limited data implies caution, but high mean income in HPT suggests potential acceptance.
+Partner Group: A&E's concentration of higher incomes suggests discernment. Legal's broader range hints at varied financial attitudes.
+
+This exploration implies that income stability, professional backgrounds, and social dynamics influence coupon acceptance. Understanding these nuances aids in crafting targeted strategies for coupon distribution, ensuring maximum impact based on passengers' characteristics and preferences.
+
+
+
 
 
